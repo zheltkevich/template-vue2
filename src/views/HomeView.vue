@@ -2,7 +2,7 @@
     <div class="home">
         <img
             alt="Vue logo"
-            src="../assets/logo.png">
+            src="@/assets/logo.png">
         <WelcomeComponent msg="Welcome to Vue2 template" />
     </div>
 </template>

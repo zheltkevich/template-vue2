@@ -1,4 +1,5 @@
-# javascript
+# template-vue2
+Easy way to launch your SPA/PWA with a ready-to-go boilerplate based on using Vue2, Eslint7, Stylelint14
 
 ## Project setup
 ```

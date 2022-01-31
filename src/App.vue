@@ -8,6 +8,9 @@
             <router-link to="/">
                 Home
             </router-link> |
+            <router-link to="/">
+                Home
+            </router-link> |
             <router-link to="/about">
                 About
             </router-link>
@@ -32,6 +35,7 @@ export default {
 body {
     display: flex;
     min-height: 100vh;
+    background-color: #2c3e50;
 }
 
 .app {

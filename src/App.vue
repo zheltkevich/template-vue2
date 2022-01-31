@@ -31,7 +31,6 @@ export default {
 <style lang="scss">
 body {
     display: flex;
-    flex-direction: column;
     min-height: 100vh;
 }
 

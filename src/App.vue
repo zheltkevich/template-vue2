@@ -1,5 +1,7 @@
 <template>
-    <div id="app">
+    <div
+        id="app"
+        class="app">
         <div
             id="nav"
             class="app__nav">
@@ -27,24 +29,25 @@ export default {
 </script>
 
 <style lang="scss">
-#app {
+.app {
+    color: #2c3e50;
     font-family: Avenir, Helvetica, Arial, sans-serif;
+    text-align: center;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
-    text-align: center;
-    color: #2c3e50;
-}
 
-#nav {
-    padding: 30px;
+    &__nav {
+        padding: 30px;
 
-    a {
-        font-weight: bold;
-        color: #2c3e50;
+        a {
+            color: #2c3e50;
+            font-weight: bold;
 
-        &.router-link-exact-active {
-        color: #42b983;
+            &.router-link-exact-active {
+                color: #42b983;
+            }
         }
     }
 }
+
 </style>

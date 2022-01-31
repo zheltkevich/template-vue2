@@ -1,4 +1,5 @@
 module.exports = {
+    root: true,
     env: {
         browser: true,
         es2021: true,
@@ -9,7 +10,6 @@ module.exports = {
         'eslint:recommended',
         'standard',
     ],
-
     parserOptions: {
         parser: 'babel-eslint',
         sourceType: 'module',
@@ -28,6 +28,13 @@ module.exports = {
         'comma-dangle': ['error', 'always-multiline'],
         'quote-props': ['error', 'consistent-as-needed'],
         'space-before-function-paren': ['error', 'never'],
+        'no-unused-vars': ['error',
+            {
+                args: 'all',
+                argsIgnorePattern: '^_',
+                varsIgnorePattern: '_',
+            },
+        ],
 
         // plugin:vue/recommended
         'vue/html-indent': ['error', 4],

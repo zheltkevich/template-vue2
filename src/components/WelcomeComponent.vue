@@ -1,6 +1,7 @@
 <template>
     <div class="hello">
         <h1>{{ msg }}</h1>
+        <p>Easy way to launch your SPA/PWA with a ready-to-go boilerplate based on using Vue2 with Eslint7 and Stylelint14</p>
         <p>
             For a guide and recipes on how to configure / customize this project,<br>
             check out the
@@ -9,6 +10,21 @@
                 target="_blank"
                 rel="noopener">vue-cli documentation</a>.
         </p>
+        <h3>Installed packages</h3>
+        <ul>
+            <li>
+                <a
+                    href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
+                    target="_blank"
+                    rel="noopener">eslint 7</a>
+            </li>
+            <li>
+                <a
+                    href="https://github.com/vuejs/vue-cli/tree/dev/packages/%40vue/cli-plugin-babel"
+                    target="_blank"
+                    rel="noopener">stylelint 14</a>
+            </li>
+        </ul>
         <h3>Installed CLI Plugins</h3>
         <ul>
             <li>
@@ -113,7 +129,7 @@
 
 <script>
 export default {
-    name: 'HelloWorld',
+    name: 'WelcomeComponent',
     props: {
         msg: {
             type: String,

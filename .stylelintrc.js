@@ -20,6 +20,8 @@ module.exports = {
         'selector-max-compound-selectors': 3,
         'font-family-name-quotes': 'always-where-recommended',
         'max-line-length': 160,
+        'color-function-notation': 'legacy',
+        'alpha-value-notation': 'number',
 
         'color-hex-length': 'long',
         'color-named': 'never',

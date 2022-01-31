@@ -1,7 +1,7 @@
 <template>
     <div
         id="app"
-        class="app">
+        class="app container">
         <div
             id="nav"
             class="app__nav">
@@ -29,12 +29,29 @@ export default {
 </script>
 
 <style lang="scss">
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
 .app {
+    flex-grow: 1;
+    margin-top: 40px;
+    margin-bottom: 40px;
+    border-radius: 16px;
     color: #2c3e50;
-    font-family: Avenir, Helvetica, Arial, sans-serif;
+    box-shadow: 0 0 40px rgba(0, 0, 0, 0.2);
     text-align: center;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
+
+    &.container {
+        max-width: 800px;
+        margin-right: auto;
+        margin-left: auto;
+        padding-right: 40px;
+        padding-left: 40px;
+        background-color: #ffffff;
+    }
 
     &__nav {
         padding: 30px;

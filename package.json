@@ -6,7 +6,7 @@
     "scripts": {
         "dev": "vue-cli-service serve",
         "build": "vue-cli-service build",
-        "lint": "vue-cli-service lint",
+        "lint:js": "vue-cli-service lint",
         "lint:css": "cross-env NODE_ENV=production stylelint \"./src/**/*.{css,sass,scss,vue}\" --quiet --fix"
     },
     "gitHooks": {
@@ -14,11 +14,11 @@
     },
     "lint-staged": {
         "*.{js,vue}": [
-            "vue-cli-service lint",
+            "npm run lint:js",
             "git add ."
         ],
         "*.{css,scss,vue}": [
-            "vue-cli-service lint",
+            "npm run lint:css",
             "git add ."
         ]
     },

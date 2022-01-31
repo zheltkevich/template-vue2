@@ -1,58 +1,59 @@
 {
-  "name": "template-vue2",
-  "version": "0.1.0",
-  "description": "Easy way to launch your SPA/PWA with a ready-to-go boilerplate based on using WebPack5, Vue2, Eslint7, Stylelint14",
-  "private": true,
-  "scripts": {
-    "dev": "vue-cli-service serve",
-    "build": "vue-cli-service build",
-    "lint": "vue-cli-service lint"
-  },
-  "dependencies": {
-    "core-js": "^3.6.5",
-    "postcss": "^8.4.5",
-    "postcss-html": "^1.3.0",
-    "postcss-scss": "^4.0.3",
-    "register-service-worker": "^1.7.1",
-    "vue": "^2.6.11",
-    "vue-router": "^3.2.0",
-    "vuex": "^3.4.0"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-babel": "~4.5.0",
-    "@vue/cli-plugin-eslint": "~4.5.0",
-    "@vue/cli-plugin-pwa": "~4.5.0",
-    "@vue/cli-plugin-router": "~4.5.0",
-    "@vue/cli-plugin-vuex": "~4.5.0",
-    "@vue/cli-service": "~4.5.0",
-    "@vue/eslint-config-standard": "^5.1.2",
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.32.0",
-    "eslint-config-standard": "^16.0.3",
-    "eslint-plugin-import": "^2.25.4",
-    "eslint-plugin-node": "^11.1.0",
-    "eslint-plugin-promise": "^5.2.0",
-    "eslint-plugin-standard": "^4.0.0",
-    "eslint-plugin-vue": "^8.4.0",
-    "lint-staged": "^9.5.0",
-    "sass": "^1.26.5",
-    "sass-loader": "^8.0.2",
-    "stylelint": "^14.3.0",
-    "stylelint-config-recommended-scss": "^5.0.2",
-    "stylelint-config-recommended-vue": "^1.1.0",
-    "stylelint-config-standard": "^24.0.0",
-    "stylelint-config-standard-scss": "^3.0.0",
-    "stylelint-order": "^5.0.0",
-    "stylelint-webpack-plugin": "^3.1.1",
-    "vue-template-compiler": "^2.6.11"
-  },
-  "gitHooks": {
-    "pre-commit": "lint-staged"
-  },
-  "lint-staged": {
-    "*.{js,jsx,vue}": [
-      "vue-cli-service lint",
-      "git add"
-    ]
-  }
+    "name": "template-vue2",
+    "version": "0.1.0",
+    "description": "Easy way to launch your SPA/PWA with a ready-to-go boilerplate based on using WebPack5, Vue2, Eslint7, Stylelint14",
+    "private": true,
+    "scripts": {
+        "dev": "vue-cli-service serve",
+        "build": "vue-cli-service build",
+        "lint": "npm run lint:css && npm run lint:js",
+        "lint:js": "cross-env NODE_ENV=production eslint ./src --ext .js,.vue --quiet --fix",
+        "lint:css": "cross-env NODE_ENV=production stylelint \"./src/**/*.{css,sass,scss,vue}\" --quiet --fix"
+    },
+    "gitHooks": {
+        "pre-commit": "lint-staged"
+    },
+    "lint-staged": {
+        "*.{js,vue}": "npm run lint:js",
+        "*.{css,sass,scss,vue}": "npm run lint:css"
+    },
+    "dependencies": {
+        "core-js": "^3.6.5",
+        "postcss": "^8.4.5",
+        "postcss-html": "^1.3.0",
+        "postcss-scss": "^4.0.3",
+        "register-service-worker": "^1.7.1",
+        "vue": "^2.6.11",
+        "vue-router": "^3.2.0",
+        "vuex": "^3.4.0"
+    },
+    "devDependencies": {
+        "@vue/cli-plugin-babel": "~4.5.0",
+        "@vue/cli-plugin-eslint": "~4.5.0",
+        "@vue/cli-plugin-pwa": "~4.5.0",
+        "@vue/cli-plugin-router": "~4.5.0",
+        "@vue/cli-plugin-vuex": "~4.5.0",
+        "@vue/cli-service": "~4.5.0",
+        "@vue/eslint-config-standard": "^5.1.2",
+        "babel-eslint": "^10.1.0",
+        "cross-env": "^7.0.3",
+        "eslint": "^7.32.0",
+        "eslint-config-standard": "^16.0.3",
+        "eslint-plugin-import": "^2.25.4",
+        "eslint-plugin-node": "^11.1.0",
+        "eslint-plugin-promise": "^5.2.0",
+        "eslint-plugin-standard": "^4.0.0",
+        "eslint-plugin-vue": "^8.4.0",
+        "lint-staged": "^9.5.0",
+        "sass": "^1.26.5",
+        "sass-loader": "^8.0.2",
+        "stylelint": "^14.3.0",
+        "stylelint-config-recommended-scss": "^5.0.2",
+        "stylelint-config-recommended-vue": "^1.1.0",
+        "stylelint-config-standard": "^24.0.0",
+        "stylelint-config-standard-scss": "^3.0.0",
+        "stylelint-order": "^5.0.0",
+        "stylelint-webpack-plugin": "^3.1.1",
+        "vue-template-compiler": "^2.6.11"
+    }
 }
